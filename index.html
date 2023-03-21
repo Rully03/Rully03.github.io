@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column" id="">
+            <h2>Kalkulator BMI</h2>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan,
+                berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? yuk, hitung sekarang di
+                kalkulator BMI.</p>
+            <div class="card">
+                <form id="calculator" onsubmit="return validateForm()" name="calculator" class="form" method="post">
+                    <div class="form-group-jk">
+                        <strong>Jenis Kelamin</strong> <br>
+                        <input type="radio" name="jenis-kelamin" value="p">
+                        <label for="jenis-kelamin">Pria</label>
+                        <input width="50%" type="radio" name="jenis-kelamin" value="w">
+                        <label for="jenis-kelamin">Wanita</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="berat-badan">Berat badan (kg)</label>
+                        <div class="icon-input">
+                            <i class="fa-sharp fa-solid fa-pencil"></i>
+                            <input class="input-berat-badan" name="berat-badan" id="berat-badan" type="number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="usia">Usia (tahun)</label>
+                        <div class="icon-input">
+                            <i class="fa-solid fa-pencil"></i>
+                            <input class="input-usia" name="usia" id="usia" type="number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tinggi-badan">Tinggi Badan (cm)</label>
+                        <div class="icon-input">
+                            <i class="fa-solid fa-pencil"></i>
+                            <input class="input-tinggi-badan" name="tinggi-badan" id="tinggi-badan" type="number">
+                        </div>
+                    </div><br>
+                    <div class="button-group">
+                        <input type="button" class="btn" value="Hitung BMI" onclick="hitungBMI()" />
+                        <input type="button" class="btn1" value="Reset" onclick="reset()" />
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h3>Keunggulan fitur</h3>
+                <p> 1. Menghitung berat badan <br>
+                    2. Menentukan kategori berat badan ideal atau tidak <br>
+                    3. Mempersiapkan program penurunan berat badan</p>
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh
+                    mengandalkan
+                    pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain
+                    berkonsultasi
+                    dengan orang yang memenuhi syarat seperti dokter.</p>
+                <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indeks
+                    Massa
+                    Tubuh (atau BMI) dihitung sebagai beraet badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi
+                    badan
+                    Anda
+                    (dalam meter) atau BMI = Kg/M².</p>
+            </div>
+        </div>
+        <div class="column" id="formKanan" hidden>
+            <h3>Hasil</h3>
+            <div class="card">
+                <div class="hasil" id="klasifikasi"></div><br>
+                <div class="hasil" id="hasil">
+                    <p></p>
+                </div><br>
+                <div class="hasil" id="klasifikasi2"></div><br>
+                <div class="hasil">
+                    <button onclick="downloadResult()" class="btn">
+                        <i class="fa fa-download"></i> Download hasil
+                        BMI</button>
+                </div><br>
+            </div>
+            <div>
+                <p id="range"></p>
+                <p id="kategori"></p>
+            </div>
+            <div class="button-group">
+                <button onclick="visitKonsultasi()" class="btn">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button onclick="visitRegistrasi()" class="btn">Registrasi Online Ahli Gizi</button>
+            </div>
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang.
+                Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait berat badan Anda.</p>
+            <div class="card">
+                <div class="hasil" id="info"></div>
+                <div class="hasil">
+                    <div class="button-group"></div>
+                    <div class="hasil">
+                        <button onclick="visitKonsultasi()" class="btn">Konsultasi Ahli Gizi Via
+                            Aplikasi</button>
+                        <button onclick="visitRegistrasi()" class="btn">Registrasi
+                            Online Ahli Gizi</button>
+                    </div>
+                </div>
+            </div>
+            <p class="hasil"> Download Aplikasi</p>
+            <div class="tengah">
+                <div class="button-group"></div>
+                <div class="hasil">
+                    <button onclick="visitGoogleplay()" class="btn1"><i class="fa-brands fa-google-play"></i> Google
+                        Play</button>
+                    <button onclick="visitAppstore()" class="btn1"><i class="fa-brands fa-apple"></i>
+                        App Store</button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <footer>Copyright © 2023 Rully Angeana From Software Engineering Course By RevoU. All Rights Reserved</footer>
+</body>
+
+</html>

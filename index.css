@@ -1,0 +1,122 @@
+div {
+    border: px solid red;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hasil {
+    text-align: center;
+    font-size: 20px;
+}
+
+p {
+    width: 76%;
+    text-align: justify;
+}
+
+.card {
+    background-color: rgb(231, 231, 231);
+    padding: 1em 2em;
+    width: 68%
+}
+
+.tengah {
+    /* padding: 1em 2em; */
+    width: 77%
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.label {
+    font-weight: bold;
+}
+
+.input {
+    width: 500px;
+}
+
+.icon {
+    width: 1%;
+}
+
+.input-usia {
+    width: 90%;
+}
+
+.input-berat-badan {
+    width: 90%;
+}
+
+.input-tinggi-badan {
+    width: 90%;
+}
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(43, 191, 254);
+    border-radius: 0.6em;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn1 {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.6em;
+    color: #e9dfdf;
+    cursor: pointer;
+    line-height: 1;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #000000;
+    outline: 0;
+}
+
+.first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.first:hover {
+    box-shadow: 0 0 40px 40px #020202 inset;
+}
+
+footer {
+    background-color: #fefafa;
+    color: #9d9a9a;
+    /* padding: 5px; */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
